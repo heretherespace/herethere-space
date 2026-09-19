@@ -7,17 +7,8 @@
 <meta name="description" content="How to use the Daikin air conditioner remote control at HERE Senbonkita.">
 <!--
   Guest-facing instruction page for the Daikin ceiling-cassette AC unit
-  (model S40ZGV) and its wireless remote (model ARC476A56).
-
-  NOTE FOR JIE: I could not access a machine-readable copy of Daikin's
-  official manual for the ARC476A56 (doc 3P682152-1 is a scanned PDF), so
-  the MODE / TIMER / AIRFLOW SWING section below (the controls under the
-  flip-down cover) is written from Daikin's closest published English
-  reference for this remote family, not a verified transcription of this
-  exact model. The POWER and TEMPERATURE controls are confirmed directly
-  against a product photo of this exact model. Worth a quick double-check
-  against the physical remote next time you or someone on-site can look —
-  flag anything that doesn't match and I'll correct it.
+  (model S40ZGV) and its wireless remote (model ARC476A56). Simplified
+  per Jie's request — plain text, no diagram.
 -->
 <style>
   @font-face{
@@ -32,182 +23,47 @@
         url('../../fonts/Tenet-Medium.otf') format('opentype');
     font-weight:500; font-style:normal; font-display:swap;
   }
-  @font-face{
-    font-family:'ABC Arizona Flare';
-    src:url('../../fonts/ArizonaFlare-Regular.woff2') format('woff2'),
-        url('../../fonts/ArizonaFlare-Regular.otf') format('opentype');
-    font-weight:400; font-style:normal; font-display:swap;
-  }
   :root{
-    --blue:#004FFF;
-    --maroon:#3F202C;
-    --paper:#FAFAFA;
-    --ink:#1A1A1A;
-    --ink-soft:#6B6B6B;
-    --line:#E3E3E3;
-    --panel:#F1F1EF;
+    --ink:#1A1A1A; --ink-soft:#6B6B6B; --line:#E3E3E3; --paper:#FAFAFA;
     color-scheme: light;
   }
   *{box-sizing:border-box;}
   body{
     margin:0; background:var(--paper); color:var(--ink);
     font-family:'Tenet', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    line-height:1.6; -webkit-font-smoothing:antialiased;
+    line-height:1.6;
   }
-  .wrap{max-width:640px; margin:0 auto; padding:0 24px;}
+  .wrap{max-width:560px; margin:0 auto; padding:40px 24px 60px;}
   a{color:inherit;}
-  header{padding:28px 0 20px; border-bottom:1px solid var(--line);}
-  .logotype{
-    font-family:'ABC Arizona Flare', serif; font-size:.85rem;
-    letter-spacing:.06em; text-transform:uppercase; text-decoration:none; color:var(--ink);
-  }
-  .back{
-    display:inline-block; margin-top:10px; font-size:.78rem; color:var(--ink-soft);
-    text-decoration:none; letter-spacing:.03em;
-  }
-  main{padding:36px 0 80px;}
-  .eyebrow{
-    text-transform:uppercase; letter-spacing:.14em; font-size:.78rem;
-    font-weight:500; color:var(--blue); margin-bottom:10px;
-  }
-  h1{
-    font-size:clamp(1.7rem, 5vw, 2.1rem); font-weight:400; margin:0 0 6px; letter-spacing:-.01em;
-  }
-  .sub{color:var(--ink-soft); font-size:.95rem; margin:0 0 34px;}
-  .model-tag{
-    display:inline-block; font-size:.72rem; letter-spacing:.05em; color:var(--ink-soft);
-    border:1px solid var(--line); border-radius:20px; padding:4px 12px; margin-top:6px;
-  }
-
-  /* remote diagram */
-  .remote-card{
-    background:var(--panel); border-radius:14px; padding:28px 24px;
-    margin:0 0 40px; display:flex; gap:26px; align-items:flex-start;
-  }
-  .remote-body{
-    flex:0 0 108px; background:#fff; border:1px solid var(--line);
-    border-radius:16px; padding:14px 10px; box-shadow:0 1px 2px rgba(0,0,0,.04);
-  }
-  .remote-screen{
-    background:#DCE3E6; border-radius:4px; height:70px; margin-bottom:12px;
-  }
-  .remote-row{display:flex; justify-content:center; gap:8px; margin-bottom:6px;}
-  .remote-btn{
-    width:26px; height:26px; border-radius:50%; background:var(--paper);
-    border:1px solid var(--line); font-size:.6rem; display:flex;
-    align-items:center; justify-content:center;
-  }
-  .remote-btn.power{background:var(--ink); color:#fff; border-color:var(--ink);}
-  .remote-btn.green{background:#2E8B57; color:#fff; border-color:#2E8B57;}
-  .remote-caption{font-size:.66rem; text-align:center; color:var(--ink-soft); margin-top:8px;}
-  .remote-note{flex:1; font-size:.86rem; color:var(--ink-soft);}
-  .remote-note strong{color:var(--ink); font-weight:500;}
-
-  .step{
-    display:flex; gap:18px; padding:22px 0; border-top:1px solid var(--line);
-  }
-  .step:first-of-type{border-top:none;}
-  .step-num{
-    flex:0 0 30px; height:30px; border-radius:50%; background:var(--blue); color:#fff;
-    display:flex; align-items:center; justify-content:center; font-size:.85rem; font-weight:500;
-  }
-  .step-body h3{
-    font-family:'Tenet', sans-serif; font-weight:500; font-size:1.02rem; margin:0 0 4px;
-  }
-  .step-body .jp{color:var(--ink-soft); font-size:.82rem; margin:0 0 8px;}
-  .step-body p{margin:0; font-size:.92rem; color:var(--ink);}
-
-  .note-box{
-    background:var(--panel); border-radius:10px; padding:18px 20px; margin-top:34px;
-    font-size:.86rem; color:var(--ink-soft);
-  }
-  .note-box strong{color:var(--ink); font-weight:500;}
-
-  footer{
-    border-top:1px solid var(--line); padding:24px 0 50px; margin-top:20px;
-    font-size:.8rem; color:var(--ink-soft);
-  }
+  .back{font-size:.8rem; color:var(--ink-soft); text-decoration:none;}
+  h1{font-size:1.6rem; font-weight:500; margin:20px 0 4px;}
+  .sub{color:var(--ink-soft); font-size:.9rem; margin:0 0 28px;}
+  ol{padding-left:22px; margin:0;}
+  li{margin-bottom:20px; font-size:.98rem;}
+  li b{font-weight:500;}
+  li .jp{color:var(--ink-soft); font-size:.85rem;}
+  .note{margin-top:30px; font-size:.85rem; color:var(--ink-soft);}
+  footer{margin-top:40px; font-size:.8rem; color:var(--ink-soft);}
   footer a{text-decoration:underline;}
 </style>
 </head>
 <body>
+<div class="wrap">
+  <a href="/#contact" class="back">← Back to HERE Senbonkita</a>
+  <h1>Air Conditioner</h1>
+  <p class="sub">Daikin remote control</p>
 
-<header>
-  <div class="wrap">
-    <a href="/" class="logotype">HERE / THERE</a><br>
-    <a href="/#contact" class="back">← Back to HERE Senbonkita</a>
-  </div>
-</header>
+  <ol>
+    <li><b>Power on / off</b> — press the round button in the centre. <span class="jp">運転／停止</span></li>
+    <li><b>Temperature</b> — use ▲ / ▼ on the right to raise or lower it. We suggest around 26°C. <span class="jp">温度</span></li>
+    <li><b>Auto mode</b> — the green button on the left. Leave it on this setting and the unit looks after itself. <span class="jp">自動運転</span></li>
+  </ol>
 
-<main>
-  <div class="wrap">
-    <div class="eyebrow">Room Guide</div>
-    <h1>Air Conditioner — How to Use</h1>
-    <p class="sub">Daikin remote control for the room's air conditioning unit.</p>
-    <span class="model-tag">Remote model: Daikin ARC476A56</span>
+  <p class="note">There's a small flip-down cover at the base of the remote with extra settings (mode, timer, airflow) if you want them — Auto mode above is all most guests need.</p>
 
-    <div class="remote-card">
-      <div class="remote-body">
-        <div class="remote-screen"></div>
-        <div class="remote-row">
-          <div class="remote-btn green">■</div>
-          <div class="remote-btn power">⏻</div>
-          <div class="remote-btn">▲▼</div>
-        </div>
-        <div class="remote-caption">Front face of the remote</div>
-      </div>
-      <div class="remote-note">
-        <strong>The remote has a flip-down cover</strong> at the bottom. The three buttons above the cover (Auto/Fan, Power, Temperature) are all you need for a normal stay — everything else (mode, timer, airflow swing) is underneath the cover if you want it.
-      </div>
-    </div>
-
-    <div class="step">
-      <div class="step-num">1</div>
-      <div class="step-body">
-        <h3>Turn it on / off</h3>
-        <p class="jp">運転／停止 — the round button in the centre</p>
-        <p>Press once to start the air conditioner. Press it again any time to turn it off. Point the remote at the unit on the ceiling when you press it — you should hear a soft beep and see the display on the unit light up.</p>
-      </div>
-    </div>
-
-    <div class="step">
-      <div class="step-num">2</div>
-      <div class="step-body">
-        <h3>Set the temperature</h3>
-        <p class="jp">温度 — the ▲ / ▼ buttons on the right</p>
-        <p>Press ▲ to make the room warmer, ▼ to make it cooler. Each press moves the target temperature by 1°C. We suggest starting around 26°C in summer.</p>
-      </div>
-    </div>
-
-    <div class="step">
-      <div class="step-num">3</div>
-      <div class="step-body">
-        <h3>Auto mode / fan speed</h3>
-        <p class="jp">自動運転／風量 — the green button on the left</p>
-        <p>Leave the unit on this setting and it will automatically choose whether to cool, heat, dry the air, or just circulate it, and pick a sensible fan speed. This is the easiest setting for a short stay — you shouldn't need to touch anything else.</p>
-      </div>
-    </div>
-
-    <div class="step">
-      <div class="step-num">4</div>
-      <div class="step-body">
-        <h3>More options (optional)</h3>
-        <p class="jp">Under the flip-down cover</p>
-        <p>Lifting the small cover at the base of the remote reveals further controls — manually choosing a mode (cool / heat / dry / fan only), the airflow direction, a powerful or quiet setting, and on/off timers. You're welcome to explore these, but Auto mode above covers most needs.</p>
-      </div>
-    </div>
-
-    <div class="note-box">
-      <strong>Not responding?</strong> Make sure you're pointing the remote directly at the unit and are within a few metres. If the display on the remote itself is blank, it likely needs two AAA batteries — please let us know and we'll sort it out.
-    </div>
-  </div>
-</main>
-
-<footer>
-  <div class="wrap">
-    Questions about the room? Email us at <a href="mailto:info@herethere.space">info@herethere.space</a>.
-  </div>
-</footer>
-
+  <footer>
+    Questions? Email <a href="mailto:info@herethere.space">info@herethere.space</a>
+  </footer>
+</div>
 </body>
 </html>
