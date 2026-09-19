@@ -45,6 +45,20 @@
   .note{margin-top:30px; font-size:.85rem; color:var(--ink-soft);}
   footer{margin-top:40px; font-size:.8rem; color:var(--ink-soft);}
   footer a{text-decoration:underline;}
+
+  .remote{
+    width:120px; margin:24px 0 32px; background:#fff; border:1px solid var(--line);
+    border-radius:18px; padding:16px 12px;
+  }
+  .remote-screen{background:#DCE3E6; border-radius:4px; height:76px; margin-bottom:14px;}
+  .remote-row{display:flex; justify-content:center; gap:10px;}
+  .remote-btn{
+    width:28px; height:28px; border-radius:50%; background:var(--paper);
+    border:1px solid var(--line); font-size:.62rem; display:flex;
+    align-items:center; justify-content:center;
+  }
+  .remote-btn.power{background:var(--ink); color:#fff; border-color:var(--ink);}
+  .remote-btn.green{background:#2E8B57; color:#fff; border-color:#2E8B57;}
 </style>
 </head>
 <body>
@@ -52,6 +66,15 @@
   <a href="/#contact" class="back">← Back to HERE Senbonkita</a>
   <h1>Air Conditioner</h1>
   <p class="sub">Daikin remote control</p>
+
+  <div class="remote">
+    <div class="remote-screen"></div>
+    <div class="remote-row">
+      <div class="remote-btn green">■</div>
+      <div class="remote-btn power">⏻</div>
+      <div class="remote-btn">▲▼</div>
+    </div>
+  </div>
 
   <ol>
     <li><b>Power on / off</b> — press the round button in the centre. <span class="jp">運転／停止</span></li>
