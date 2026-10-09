@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Air Conditioner Guide — HERE Senbonkita</title>
+<meta name="description" content="How to use the Daikin air conditioner remote control at HERE Senbonkita.">
+<!--
+  Guest-facing instruction page for the Daikin ceiling-cassette AC unit
+  (model S40ZGV) and its wireless remote (model ARC476A56). Simplified
+  per Jie's request — plain text, no diagram.
+-->
+<style>
+  @font-face{
+    font-family:'Tenet';
+    src:url('../../fonts/Tenet-Regular.woff2') format('woff2'),
+        url('../../fonts/Tenet-Regular.otf') format('opentype');
+    font-weight:400; font-style:normal; font-display:swap;
+  }
+  @font-face{
+    font-family:'Tenet';
+    src:url('../../fonts/Tenet-Medium.woff2') format('woff2'),
+        url('../../fonts/Tenet-Medium.otf') format('opentype');
+    font-weight:500; font-style:normal; font-display:swap;
+  }
+  :root{
+    --ink:#1A1A1A; --ink-soft:#6B6B6B; --line:#E3E3E3; --paper:#FAFAFA;
+    color-scheme: light;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0; background:var(--paper); color:var(--ink);
+    font-family:'Tenet', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    line-height:1.6;
+  }
+  .wrap{max-width:560px; margin:0 auto; padding:40px 24px 60px;}
+  a{color:inherit;}
+  .back{font-size:.8rem; color:var(--ink-soft); text-decoration:none;}
+  h1{font-size:1.6rem; font-weight:500; margin:20px 0 4px;}
+  .sub{color:var(--ink-soft); font-size:.9rem; margin:0 0 28px;}
+  ol{padding-left:22px; margin:0;}
+  li{margin-bottom:20px; font-size:.98rem;}
+  li b{font-weight:500;}
+  li .jp{color:var(--ink-soft); font-size:.85rem;}
+  .note{margin-top:30px; font-size:.85rem; color:var(--ink-soft);}
+  footer{margin-top:40px; font-size:.8rem; color:var(--ink-soft);}
+  footer a{text-decoration:underline;}
+
+  .remote{
+    width:120px; margin:24px 0 32px; background:#fff; border:1px solid var(--line);
+    border-radius:18px; padding:16px 12px;
+  }
+  .remote-screen{background:#DCE3E6; border-radius:4px; height:76px; margin-bottom:14px;}
+  .remote-row{display:flex; justify-content:center; gap:10px;}
+  .remote-btn{
+    width:28px; height:28px; border-radius:50%; background:var(--paper);
+    border:1px solid var(--line); font-size:.62rem; display:flex;
+    align-items:center; justify-content:center;
+  }
+  .remote-btn.power{background:var(--ink); color:#fff; border-color:var(--ink);}
+  .remote-btn.green{background:#2E8B57; color:#fff; border-color:#2E8B57;}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a href="/#contact" class="back">← Back to HERE Senbonkita</a>
+  <h1>Air Conditioner</h1>
+  <p class="sub">Daikin remote control</p>
+
+  <div class="remote">
+    <div class="remote-screen"></div>
+    <div class="remote-row">
+      <div class="remote-btn green">■</div>
+      <div class="remote-btn power">⏻</div>
+      <div class="remote-btn">▲▼</div>
+    </div>
+  </div>
+
+  <ol>
+    <li><b>Power on / off</b> — press the round button in the centre. <span class="jp">運転／停止</span></li>
+    <li><b>Temperature</b> — use ▲ / ▼ on the right to raise or lower it. We suggest around 24°C. <span class="jp">温度</span></li>
+    <li><b>Auto mode</b> — the green button on the left. Leave it on this setting and the unit looks after itself. <span class="jp">自動運転</span></li>
+  </ol>
+
+  <p class="note">There's a small flip-down cover at the base of the remote with extra settings (mode, timer, airflow) if you want them — Auto mode above is all most guests need.</p>
+
+  <footer>
+    Questions? Email <a href="mailto:info@herethere.space">info@herethere.space</a>
+  </footer>
+</div>
+</body>
+</html>
